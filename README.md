@@ -1,1 +1,1 @@
-jingfeng-tang.github.io
+\url{jingfeng-tang.github.io}
