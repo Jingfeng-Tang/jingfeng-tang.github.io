@@ -397,31 +397,35 @@
   </main>
 
   <script>
-    function switchLang(lang) {
-      const enItems = document.querySelectorAll('.en');
-      const zhItems = document.querySelectorAll('.zh');
-      const btnEn = document.getElementById('btn-en');
-      const btnZh = document.getElementById('btn-zh');
+  function switchLang(lang) {
+    const enItems = document.querySelectorAll('.en');
+    const zhItems = document.querySelectorAll('.zh');
+    const btnEn = document.getElementById('btn-en');
+    const btnZh = document.getElementById('btn-zh');
 
-      if (lang === 'en') {
-        enItems.forEach(item => item.style.display = '');
-        zhItems.forEach(item => item.style.display = 'none');
-        btnEn.classList.add('active');
-        btnZh.classList.remove('active');
-        document.documentElement.lang = 'en';
-        localStorage.setItem('lang', 'en');
-      } else {
-        enItems.forEach(item => item.style.display = 'none');
-        zhItems.forEach(item => item.style.display = '');
-        btnEn.classList.remove('active');
-        btnZh.classList.add('active');
-        document.documentElement.lang = 'zh-CN';
-        localStorage.setItem('lang', 'zh');
-      }
+    if (lang === 'en') {
+      enItems.forEach(item => item.style.display = 'block');
+      zhItems.forEach(item => item.style.display = 'none');
+
+      btnEn.classList.add('active');
+      btnZh.classList.remove('active');
+
+      document.documentElement.lang = 'en';
+      localStorage.setItem('lang', 'en');
+    } else {
+      enItems.forEach(item => item.style.display = 'none');
+      zhItems.forEach(item => item.style.display = 'block');
+
+      btnEn.classList.remove('active');
+      btnZh.classList.add('active');
+
+      document.documentElement.lang = 'zh-CN';
+      localStorage.setItem('lang', 'zh');
     }
+  }
 
-    const savedLang = localStorage.getItem('lang') || 'en';
-    switchLang(savedLang);
-  </script>
+  const savedLang = localStorage.getItem('lang') || 'en';
+  switchLang(savedLang);
+</script>
 </body>
 </html>
