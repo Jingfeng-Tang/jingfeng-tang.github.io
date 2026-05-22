@@ -24,6 +24,32 @@
       box-shadow: 8px 8px 0 #222;
     }
 
+    .lang-switch {
+      text-align: right;
+      margin-bottom: 24px;
+    }
+
+    .lang-switch button {
+      font-family: "Courier New", monospace;
+      background: #fff6df;
+      color: #222;
+      border: 1px solid #222;
+      padding: 6px 12px;
+      margin-left: 6px;
+      cursor: pointer;
+      box-shadow: 3px 3px 0 #222;
+    }
+
+    .lang-switch button:hover,
+    .lang-switch button.active {
+      background: #222;
+      color: #fffaf0;
+    }
+
+    .zh {
+      display: none;
+    }
+
     .header {
       display: flex;
       align-items: center;
@@ -141,23 +167,40 @@
 <body>
   <main class="page">
 
+    <div class="lang-switch">
+      <button id="btn-en" class="active" onclick="switchLang('en')">EN</button>
+      <button id="btn-zh" onclick="switchLang('zh')">中文</button>
+    </div>
+
     <div class="header">
       <img src="profile.png" alt="Profile photo" class="avatar">
 
       <div>
         <h1>唐静峰（Jingfeng Tang）</h1>
-        <p class="subtitle">Ph.D. student</p>
+        <p class="subtitle en">Ph.D. student</p>
+        <p class="subtitle zh">博士研究生</p>
       </div>
     </div>
 
-    <section>
+    <section class="en">
       <h2>About</h2>
       <p>
-        I am a Ph.D. student in Computer Science and Technology at Northeastern University. Before that, I received my M.Sc. degree from the School of Computer Science and Communication Engineering, Jiangsu University. My research interests include brain disorder analysis and weakly supervised learning.
+        I am a Ph.D. student in Computer Science and Technology at Northeastern University.
+        Before that, I received my M.Sc. degree from the School of Computer Science and
+        Communication Engineering, Jiangsu University. My research interests include brain
+        disorder analysis and weakly supervised learning.
       </p>
     </section>
 
-    <section>
+    <section class="zh">
+      <h2>关于我</h2>
+      <p>
+        我是东北大学计算机科学与技术专业博士研究生。此前，我于江苏大学计算机科学与通信工程学院获得硕士学位。
+        我的研究兴趣包括脑疾病分析和弱监督学习。
+      </p>
+    </section>
+
+    <section class="en">
       <h2>News</h2>
 
       <div class="news-box">
@@ -166,7 +209,7 @@
             <span class="news-date">Sep. 2025</span> — One paper accepted by JVCIR.
           </li>
           <li>
-            <span class="news-date">Jun. 2025</span> — Received the M.Sc. (Eng.) degree from Jiangsu University.
+            <span class="news-date">Jun. 2025</span> — Received the M.Sc. degree from Jiangsu University.
           </li>
           <li>
             <span class="news-date">Aug. 2024</span> — One paper accepted by IEEE TCSVT.
@@ -175,18 +218,34 @@
       </div>
     </section>
 
+    <section class="zh">
+      <h2>新闻</h2>
 
+      <div class="news-box">
+        <ul class="news-list">
+          <li>
+            <span class="news-date">Sep. 2025</span> — 一篇论文被 JVCIR 接收。
+          </li>
+          <li>
+            <span class="news-date">Jun. 2025</span> — 于江苏大学获得硕士学位。
+          </li>
+          <li>
+            <span class="news-date">Aug. 2024</span> — 一篇论文被 IEEE TCSVT 接收。
+          </li>
+        </ul>
+      </div>
+    </section>
 
-    <section>
+    <section class="en">
       <h2>Publications</h2>
-    
+
       <p>
         <strong>Inter-image Token Relation Learning for Weakly Supervised Semantic Segmentation</strong><br>
         <strong>Jingfeng Tang</strong>, Keyang Cheng*, Liutao Wei, Yongzhao Zhan<br>
         <em>Journal of Visual Communication and Image Representation (JVCIR)</em><br>
         [<a href="https://www.sciencedirect.com/science/article/pii/S1047320325001907" target="_blank">Paper</a>]
       </p>
-    
+
       <p>
         <strong>Cross-block Sparse Class Token Contrast for Weakly Supervised Semantic Segmentation</strong><br>
         Keyang Cheng*, <strong>Jingfeng Tang</strong>, Hongjian Gu, Hao Wan, Maozhen Li<br>
@@ -196,67 +255,173 @@
       </p>
     </section>
 
-   <section>
-    <h2>Selected Honors and Awards</h2>
-  
-    <ul>
-      <li>
-        <span class="news-date">Jun. 2025</span> — Outstanding Graduate
-      </li>
-      <li>
-        <span class="news-date">Nov. 2024</span> — National Scholarship, highest student honor in China
-      </li>
-      <li>
-        <span class="news-date">Nov. 2024</span> — Jiangsu University “Boxue” President Medal, highest student honor in Jiangsu University
-      </li>
-    </ul>
-  </section>
+    <section class="zh">
+      <h2>论文发表</h2>
 
+      <p>
+        <strong>Inter-image Token Relation Learning for Weakly Supervised Semantic Segmentation</strong><br>
+        <strong>Jingfeng Tang</strong>, Keyang Cheng*, Liutao Wei, Yongzhao Zhan<br>
+        <em>Journal of Visual Communication and Image Representation (JVCIR)</em><br>
+        [<a href="https://www.sciencedirect.com/science/article/pii/S1047320325001907" target="_blank">Paper</a>]
+      </p>
 
-    <section>
-  <h2>Education</h2>
+      <p>
+        <strong>Cross-block Sparse Class Token Contrast for Weakly Supervised Semantic Segmentation</strong><br>
+        Keyang Cheng*, <strong>Jingfeng Tang</strong>, Hongjian Gu, Hao Wan, Maozhen Li<br>
+        <em>IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)</em><br>
+        [<a href="https://ieeexplore.ieee.org/document/10634191" target="_blank">Paper</a>]
+        [<a href="https://github.com/Jingfeng-Tang/CB-SCTC" target="_blank">Code</a>]
+      </p>
+    </section>
 
-  <ul>
-    <li>
-      <span class="news-date">Sep. 2025 – Present</span> — Ph.D. student in Computer Science and Technology, College of Computer Science and Engineering, Northeastern University, Shenyang, China.
-    </li>
-    <li>
-      <span class="news-date">Sep. 2022 – Jun. 2025</span> — M.Sc. in Computer Science and Technology, School of Computer Science and Communication Engineering, Jiangsu University, Zhenjiang, China.
-    </li>
-    <li>
-      <span class="news-date">Sep. 2016 – Jun. 2020</span> — B.Eng. in Internet of Things Engineering, School of Computer Science and Technology, Huaiyin Normal University, Huai’an, China.
-    </li>
-  </ul>
-</section>
+    <section class="en">
+      <h2>Selected Honors and Awards</h2>
 
-<section>
-  <h2>Projects</h2>
+      <ul>
+        <li>
+          <span class="news-date">Jun. 2025</span> — Outstanding Graduate
+        </li>
+        <li>
+          <span class="news-date">Nov. 2024</span> — National Scholarship
+        </li>
+        <li>
+          <span class="news-date">Nov. 2024</span> — Jiangsu University “Boxue” President Medal
+        </li>
+      </ul>
+    </section>
 
-  <ul>
-    <li>
-      <span class="news-date">Aug. 2024</span> — Developed 
-      <a href="https://github.com/Jingfeng-Tang/Image-Doodler" target="_blank">Image-Doodler</a>, 
-      a tool for generating masks to occlude arbitrary semantic regions and analyze class activation map variations.
-    </li>
-    <li>
-      <span class="news-date">May 2022</span> — Developed a 
-      <a href="https://github.com/Jingfeng-Tang/ComMonitor" target="_blank">serial port communication tool</a>.
-    </li>
-  </ul>
-</section>
+    <section class="zh">
+      <h2>荣誉奖励</h2>
 
-<section>
-  <h2>Links</h2>
-  <p>
-    <a href="https://github.com/Jingfeng-Tang" target="_blank">GitHub</a> /
-    <a href="mailto:tangjingfeng@mails.neu.edu.cn">Email</a>
-  </p>
-</section>
+      <ul>
+        <li>
+          <span class="news-date">Jun. 2025</span> — 优秀毕业生
+        </li>
+        <li>
+          <span class="news-date">Nov. 2024</span> — 国家奖学金
+        </li>
+        <li>
+          <span class="news-date">Nov. 2024</span> — 江苏大学“博学”校长奖章
+        </li>
+      </ul>
+    </section>
 
-    <footer>
+    <section class="en">
+      <h2>Education</h2>
+
+      <ul>
+        <li>
+          <span class="news-date">Sep. 2025 – Present</span> — Ph.D. student in Computer Science and Technology, College of Computer Science and Engineering, Northeastern University, Shenyang, China.
+        </li>
+        <li>
+          <span class="news-date">Sep. 2022 – Jun. 2025</span> — M.Sc. in Computer Science and Technology, School of Computer Science and Communication Engineering, Jiangsu University, Zhenjiang, China.
+        </li>
+        <li>
+          <span class="news-date">Sep. 2016 – Jun. 2020</span> — B.Eng. in Internet of Things Engineering, School of Computer Science and Technology, Huaiyin Normal University, Huai’an, China.
+        </li>
+      </ul>
+    </section>
+
+    <section class="zh">
+      <h2>教育经历</h2>
+
+      <ul>
+        <li>
+          <span class="news-date">Sep. 2025 – Present</span> — 东北大学，计算机科学与工程学院，计算机科学与技术专业，博士研究生，中国沈阳。
+        </li>
+        <li>
+          <span class="news-date">Sep. 2022 – Jun. 2025</span> — 江苏大学，计算机科学与通信工程学院，计算机科学与技术专业，硕士，中国镇江。
+        </li>
+        <li>
+          <span class="news-date">Sep. 2016 – Jun. 2020</span> — 淮阴师范学院，计算机科学与技术学院，物联网工程专业，学士，中国淮安。
+        </li>
+      </ul>
+    </section>
+
+    <section class="en">
+      <h2>Projects</h2>
+
+      <ul>
+        <li>
+          <span class="news-date">Aug. 2024</span> — Developed
+          <a href="https://github.com/Jingfeng-Tang/Image-Doodler" target="_blank">Image-Doodler</a>,
+          a tool for generating masks to occlude arbitrary semantic regions and analyze class activation map variations.
+        </li>
+        <li>
+          <span class="news-date">May 2022</span> — Developed a
+          <a href="https://github.com/Jingfeng-Tang/ComMonitor" target="_blank">serial port communication tool</a>.
+        </li>
+      </ul>
+    </section>
+
+    <section class="zh">
+      <h2>项目</h2>
+
+      <ul>
+        <li>
+          <span class="news-date">Aug. 2024</span> — 开发
+          <a href="https://github.com/Jingfeng-Tang/Image-Doodler" target="_blank">Image-Doodler</a>，
+          一个用于生成语义区域遮挡掩码并分析类激活图变化的工具。
+        </li>
+        <li>
+          <span class="news-date">May 2022</span> — 开发
+          <a href="https://github.com/Jingfeng-Tang/ComMonitor" target="_blank">串口通信工具</a>。
+        </li>
+      </ul>
+    </section>
+
+    <section class="en">
+      <h2>Links</h2>
+      <p>
+        <a href="https://github.com/Jingfeng-Tang" target="_blank">GitHub</a> /
+        <a href="mailto:tangjingfeng@mails.neu.edu.cn">Email</a>
+      </p>
+    </section>
+
+    <section class="zh">
+      <h2>链接</h2>
+      <p>
+        <a href="https://github.com/Jingfeng-Tang" target="_blank">GitHub</a> /
+        <a href="mailto:tangjingfeng@mails.neu.edu.cn">Email</a>
+      </p>
+    </section>
+
+    <footer class="en">
       Last updated: 2026
     </footer>
 
+    <footer class="zh">
+      最后更新：2026
+    </footer>
+
   </main>
+
+  <script>
+    function switchLang(lang) {
+      const enItems = document.querySelectorAll('.en');
+      const zhItems = document.querySelectorAll('.zh');
+      const btnEn = document.getElementById('btn-en');
+      const btnZh = document.getElementById('btn-zh');
+
+      if (lang === 'en') {
+        enItems.forEach(item => item.style.display = '');
+        zhItems.forEach(item => item.style.display = 'none');
+        btnEn.classList.add('active');
+        btnZh.classList.remove('active');
+        document.documentElement.lang = 'en';
+        localStorage.setItem('lang', 'en');
+      } else {
+        enItems.forEach(item => item.style.display = 'none');
+        zhItems.forEach(item => item.style.display = '');
+        btnEn.classList.remove('active');
+        btnZh.classList.add('active');
+        document.documentElement.lang = 'zh-CN';
+        localStorage.setItem('lang', 'zh');
+      }
+    }
+
+    const savedLang = localStorage.getItem('lang') || 'en';
+    switchLang(savedLang);
+  </script>
 </body>
 </html>
