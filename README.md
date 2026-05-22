@@ -1,1 +1,1 @@
-\url{jingfeng-tang.github.io}
+[Homepage](https://jingfeng-tang.github.io/)
