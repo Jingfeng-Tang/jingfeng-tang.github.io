@@ -7,16 +7,29 @@
   <title>Jingfeng Tang</title>
 
   <style>
+    :root {
+      --font-body: Georgia, "Times New Roman", "Songti SC", STSong, serif;
+      --font-accent: "Courier New", "Noto Sans Mono", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       background: #f4ecd8;
       color: #222;
-      font-family: "Courier New", monospace;
-      line-height: 1.7;
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.72;
+      letter-spacing: 0.005em;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
     }
 
     .page {
-      max-width: 760px;
+      max-width: 840px;
       margin: 60px auto;
       padding: 40px;
       border: 2px solid #222;
@@ -30,7 +43,9 @@
     }
 
     .lang-switch button {
-      font-family: "Courier New", monospace;
+      font-family: var(--font-accent);
+      font-size: 14px;
+      font-weight: 700;
       background: #fff6df;
       color: #222;
       border: 1px solid #222;
@@ -67,12 +82,18 @@
     }
 
     h1 {
-      font-size: 32px;
+      font-family: var(--font-accent);
+      font-size: 31px;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
       margin: 0 0 8px 0;
     }
 
     h2 {
-      font-size: 20px;
+      font-family: var(--font-accent);
+      font-size: 21px;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
       margin-bottom: 8px;
       border-bottom: 1px dashed #222;
       display: inline-block;
@@ -84,10 +105,11 @@
     }
     
     .profile-links {
-  margin: 4px 0 0 0;
-  font-size: 14px;
-  line-height: 1.6;
-}
+      margin: 4px 0 0 0;
+      font-family: var(--font-accent);
+      font-size: 14px;
+      line-height: 1.65;
+    }
 
     a {
       color: #7a3e1d;
@@ -102,6 +124,22 @@
 
     section {
       margin-top: 32px;
+    }
+
+    section > p {
+      margin: 10px 0 0;
+    }
+
+    section > p + p {
+      margin-top: 22px;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+    em {
+      color: #3f3a34;
     }
 
     .news-box {
@@ -123,6 +161,8 @@
     }
 
     .news-date {
+      font-family: var(--font-accent);
+      font-size: 0.9em;
       font-weight: bold;
       color: #7a3e1d;
     }
@@ -147,6 +187,7 @@
 
     footer {
       margin-top: 48px;
+      font-family: var(--font-accent);
       font-size: 14px;
       color: #777;
     }
@@ -154,7 +195,7 @@
     @media (max-width: 600px) {
       .page {
         margin: 30px 16px;
-        padding: 28px;
+        padding: 26px 22px;
       }
 
       .header {
@@ -165,6 +206,14 @@
       .avatar {
         width: 110px;
         height: 110px;
+      }
+
+      body {
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 27px;
       }
     }
   </style>
@@ -225,6 +274,13 @@
         <ul class="news-list">
           <li>
             <span class="news-date">Sep. 2025</span> — One paper accepted by JVCIR.
+      <div class="news-box">
+        <ul class="news-list">
+          <li>
+            <span class="news-date">May 2026</span> — Our BrainHO paper was accepted by MICCAI 2026.
+          </li>
+          <li>
+            <span class="news-date">Sep. 2025</span> — One paper accepted by JVCIR.
           </li>
           <li>
             <span class="news-date">Jun. 2025</span> — Received the M.Sc. degree from Jiangsu University.
@@ -243,6 +299,13 @@
         <ul class="news-list">
           <li>
             <span class="news-date">2025年9月</span> — 一篇论文被 JVCIR 接收。
+      <div class="news-box">
+        <ul class="news-list">
+          <li>
+            <span class="news-date">2026年5月</span> — BrainHO 论文被 MICCAI 2026 接收。
+          </li>
+          <li>
+            <span class="news-date">2025年9月</span> — 一篇论文被 JVCIR 接收。
           </li>
           <li>
             <span class="news-date">2025年6月</span> — 于江苏大学获得硕士学位。
@@ -256,6 +319,19 @@
 
     <section class="en">
       <h2>Publications</h2>
+
+      <p>
+        <strong>Inter-image Token Relation Learning for Weakly Supervised Semantic Segmentation</strong><br>
+    <section class="en">
+      <h2>Publications</h2>
+
+      <p>
+        <strong>Learning the Hierarchical Organization in Brain Network for Brain Disorder Diagnosis</strong><br>
+        <strong>Jingfeng Tang</strong>, Peng Cao*, Guangqi Wen, Jinzhu Yang, Xiaoli Liu, Osmar R. Zaiane<br>
+        <em>International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI), 2026</em><br>
+        [<a href="https://arxiv.org/abs/2603.09606" target="_blank">Paper</a>]
+        [<a href="https://github.com/Jingfeng-Tang/BrainHO" target="_blank">Code</a>]
+      </p>
 
       <p>
         <strong>Inter-image Token Relation Learning for Weakly Supervised Semantic Segmentation</strong><br>
@@ -275,6 +351,19 @@
 
     <section class="zh">
       <h2>论文发表</h2>
+
+      <p>
+        <strong>Inter-image Token Relation Learning for Weakly Supervised Semantic Segmentation</strong><br>
+    <section class="zh">
+      <h2>论文发表</h2>
+
+      <p>
+        <strong>Learning the Hierarchical Organization in Brain Network for Brain Disorder Diagnosis</strong><br>
+        <strong>Jingfeng Tang</strong>, Peng Cao*, Guangqi Wen, Jinzhu Yang, Xiaoli Liu, Osmar R. Zaiane<br>
+        <em>International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI), 2026</em><br>
+        [<a href="https://arxiv.org/abs/2603.09606" target="_blank">Paper</a>]
+        [<a href="https://github.com/Jingfeng-Tang/BrainHO" target="_blank">Code</a>]
+      </p>
 
       <p>
         <strong>Inter-image Token Relation Learning for Weakly Supervised Semantic Segmentation</strong><br>
@@ -391,6 +480,13 @@
 
     <footer class="en">
       Last updated: Sep. 2025
+    </footer>
+    <footer class="en">
+      Last updated: Sep. 2026
+    </footer>
+
+    <footer class="zh">
+      最后更新：2026年9月
     </footer>
 
     <footer class="zh">
